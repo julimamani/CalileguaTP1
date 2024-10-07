@@ -1,0 +1,106 @@
+/*body {
+    overflow: hidden; 
+  }
+  
+  .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .bubble {
+    position: absolute;
+    background-color: rgba(169, 112, 233, 0.8);  Color de la burbuja 
+    border-radius: 50%;  Hace que sea circular 
+    animation: float 6s ease-in-out infinite; Animación de flotación 
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-30px); ltura máxima de flotación 
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+   Generar burbujas en posiciones aleatorias 
+  .bubble:nth-child(1) { width: 50px; height: 50px; left: calc(10% + (90% * var(--random))); }
+  .bubble:nth-child(2) { width: 70px; height: 70px; left: calc(10% + (90% * var(--random))); }
+  .bubble:nth-child(3) { width: 40px; height: 40px; left: calc(10% + (90% * var(--random))); }
+  .bubble:nth-child(4) { width: 60px; height: 60px; left: calc(10% + (90% * var(--random))); }
+  .bubble:nth-child(5) { width: 80px; height: 80px; left: calc(10% + (90% * var(--random))); }
+  
+   Añade más burbujas si es necesario */
+  
+  .bubble-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Permite que los clics pasen a través de las burbujas */
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(154, 104, 197, 0.6);
+  opacity: 0.7;
+  animation: float 10s infinite; /* Animación infinita */
+}
+
+.bubble-1 {
+  width: 100px;
+  height: 100px;
+  left: 20%;
+  animation-delay: -2s; /* Retraso para diferentes burbujas */
+}
+
+.bubble-2 {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+}
+
+.bubble-3 {
+  width: 120px;
+  height: 120px;
+  left: 70%;
+}
+
+.bubble-4 {
+  width: 90px;
+  height: 90px;
+  left: 30%;
+}
+
+.bubble-5 {
+  width: 110px;
+  height: 110px;
+  left: 80%;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+    opacity: .7;
+    filter: blur(0);
+  }
+  
+  to {
+    transform: translateY(-100vh);
+    opacity: .1; /* Desvanecer al subir */
+    filter: blur(2px); /* Aplicar desenfoque */
+}
+}

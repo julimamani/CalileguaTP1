@@ -1,0 +1,37 @@
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.pure-menu-list {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  margin: 0;            /* Elimina el margen por defecto */
+  padding: 0;           /* Elimina el padding por defecto */
+  display: flex;        /* Usa flexbox para alinear los elementos en línea */
+}
+
+.pure-menu-item {
+  margin-right: 5px;   /* Espaciado entre los enlaces */
+}
+
+.pure-menu-link {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #333;          /* Color del texto */
+}
+
+.pure-menu-link:hover {
+  color: purple;       /* Cambia el color al pasar el ratón */
+}
+
+.pure-list {
+  list-style-position: inside; /* Coloca los símbolos dentro del elemento */
+  padding-left: 1;             /* Elimina el padding izquierdo */
+}
+
+.pure-item {
+  margin: 0;                   /* Elimina márgenes en los elementos de la lista */
+}
